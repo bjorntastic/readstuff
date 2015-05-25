@@ -1,21 +1,23 @@
-<%= form_for(@book) do |f| %>
+<%= form_for(@user) do |f| %>
 
 	<div class='field'>
-		<%= f.label :author, "Who's your favorite author?" %>
-		<%= f.text_field :author %>
+		<%= f.label :fav_author, "Who's your favorite author?" %>
+		<%= f.text_field :fav_author %>
 	</div>
 
 	<div class='field'>
-		<%= f.label :genre, "What's your favourite genre?" %>
-		<%= f.select :genre, genre_options, prompt: true %>
+		<%= f.label :fav_genre, "What's your favourite genre?" %>
+		<%= f.select :fav_genre, genre_options, prompt: true %>
 	</div>
 
 	<div class='field'>
-		
+		<%= f.label :age, "How old are you?" %>
+		<%= f.number_field :age, min: 10, max: 90 %>
 	</div>
 
 	<div class='field'>
-		
+		<%= f.label :email, "Fill in your email if you want the recommendations in your inbox!" %>
+		<%= f.text_field :email %>
 	</div>
 
 	<div class='field'>
