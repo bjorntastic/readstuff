@@ -1,0 +1,26 @@
+<%= form_for(@book) do |f| %>
+
+	<div class='field'>
+		<%= f.label :author, "Who's your favorite author?" %>
+		<%= f.text_field :author %>
+	</div>
+
+	<div class='field'>
+		<%= f.label :genre, "What's your favourite genre?" %>
+		<%= f.select :genre, genre_options, prompt: true %>
+	</div>
+
+	<div class='field'>
+		
+	</div>
+
+	<div class='field'>
+		
+	</div>
+
+	<div class='field'>
+		<br>
+		<%= f.submit "Find my next book!" %>
+	</div>
+
+<% end %>
