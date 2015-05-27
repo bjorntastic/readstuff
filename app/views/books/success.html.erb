@@ -1,1 +1,17 @@
-<h1>Success page</h1>
+<h2>You should read "<%= @rec[0][0] %>" next. (Diff of <%= @rec[0][1] %>)</h2>
+
+<br>
+
+<h3>Some other books we recommend for you:</h3>
+<ul>
+	<% @rec[1..99999].each do |r| %>
+		<li>"<%= r[0] %>" -- total diff of <%= r[1] %></li>
+	<% end %>
+</ul>
+
+<br><br><h2> user inputs for testing </h2>
+
+	<p>name: <%= @user.name %></p>
+	<p>pages: <%= @user.pages %></p>
+	<p>level: <%= @user.level %></p>
+	<p>mood: <%= @user.mood %></p>

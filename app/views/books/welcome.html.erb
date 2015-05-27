@@ -1,3 +1,15 @@
 <h1>Time to get you some books to read!</h1>
 
 <%= render 'questions' %>
+
+<h2>Books uploader</h2>
+<p>This needs to be a .csv file</p>
+
+<%= form_tag({action: :upload}, multipart: true) do %>
+	<%= file_field_tag 'books' %><br>
+	<%= submit_tag 'Import books' %>
+<% end %>
+
+<h2>Show stuff button!</h2>
+
+<%= button_to("This is just a name!", {action: :show_stuff}) %>

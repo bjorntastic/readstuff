@@ -16,6 +16,21 @@
 	</div>
 
 	<div class='field'>
+		<%= f.label :pages, "Do you prefer longer or shorter books?" %></br>
+		<%= f.select :pages, pages_options, prompt: true %>
+	</div>
+
+	<div class='field'>
+		<%= f.label :level, "Do you like your books to be something to bite into or more of a casual read?" %><br>
+		<%= f.select :level, level_options, prompt: true %>
+	</div>
+
+	<div class='field'>
+		<%= f.label :mood, "How are you feeling?" %><br>
+		<%= f.select :mood, mood_options, prompt: true %>
+	</div>
+
+	<div class='field'>
 		<%= f.label :email, "Fill in your email if you want the recommendations in your inbox!" %><br>
 		<%= f.text_field :email %>
 	</div>
