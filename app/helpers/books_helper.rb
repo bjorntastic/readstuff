@@ -6,7 +6,7 @@ module BooksHelper
 
 	def level_options
 		{
-			'Extrmeely Easy' => 10,
+			'Extremely Easy' => 10,
 			'Easy' => 30,
 			'Medium' => 50,
 			'Challenge' => 70,
