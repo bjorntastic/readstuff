@@ -1,7 +1,7 @@
 module BooksHelper
 
 	def genre_options
-		['Biography', 'Tragedy', 'Fantasy', 'Sci-Fi', 'Comedy', "Drama", "Poetry"]
+		['Biography', 'Tragedy', 'Fantasy', 'Sci-Fi', 'Comedy', "Drama", "Poetry", "Business", "Science"]
 	end
 
 	def level_options
