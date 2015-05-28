@@ -5,7 +5,7 @@
 <div class='uploader'>
 	<h2 class=''>Books uploader</h2>
 	<p>This needs to be a .csv file formatted like this (and have the same header row):<br>
-	<strong>title,genre,author,published_in,pages,level,mood</strong></p>
+	<strong>title,genre,author,pages,level,mood</strong></p>
 
 	<%= form_tag({action: :upload}, multipart: true) do %>
 		<%= file_field_tag 'books' %><br>
