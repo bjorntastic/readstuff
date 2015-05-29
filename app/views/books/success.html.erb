@@ -1,13 +1,20 @@
-<h2>You should read "<%= @rec[0][0] %>" next. (Diff of <%= @rec[0][1] %>)</h2>
+<h2>You should read "<%= @rec[0][0] %>" next (score: <%= @rec[0][1] %>)</h2>
 
 <br>
 
-<h3>Some other books we recommend for you:</h3>
-<ul>
+<h3>Other recommended books:</h3>
+<table>
+	<tr>
+		<th>Title</th>
+		<th class='secondCol'>Score</th>
+	</tr>
 	<% @rec[1..99999].each do |r| %>
-		<li>"<%= r[0] %>" -- total diff of <%= r[1] %></li>
+		<tr>
+			<td>"<%= r[0] %>"</td>
+			<td class='secondCol'><%= r[1] %></td>
+		</tr>
 	<% end %>
-</ul>
+</table>
 
 <br><br><h2> user inputs for testing </h2>
 

@@ -46,3 +46,7 @@ input[type=submit]:hover {
 	    padding: 5px 10px 5px 10px;
 	    margin-top: 5px;
 }
+
+.secondCol {
+  padding-left: 15px;
+}

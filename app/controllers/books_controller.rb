@@ -48,12 +48,15 @@ class BooksController < ApplicationController
 
 	def upload
 		uploaded_io = params[:books]
+		# this saves it in the public dir
 		File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), "wb") { |file| file.write(uploaded_io.read)}
-		@stuff = CSV.foreach('public/uploads/books_data_for_upload.csv', :headers => true) do |row|
+		# add items to DB
+		@stuff = CSV.foreach(uploaded_io.path, :headers => true) do |row|
 			Book.create!(row.to_hash)
 		end
 	end
 
+	# this is not sued anymore
 	def show_stuff
 		@show = Array.new
 		f = File.open('public/uploads/sample.txt', 'r')
