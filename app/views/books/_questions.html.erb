@@ -7,22 +7,35 @@
 
 	<div class='field'>
 		<%= f.label :pages, "Do you prefer longer or shorter books?" %></br>
-		<%= f.select :pages, pages_options, prompt: true %>
+		<%= f.radio_button :pages, 10 %> Very short
+		<%= f.radio_button :pages, 30 %> Short
+		<%= f.radio_button :pages, 50 %> Medium
+		<%= f.radio_button :pages, 70 %> Long
+		<%= f.radio_button :pages, 90 %> Epic
 	</div>
 
 	<div class='field'>
 		<%= f.label :level, "Do you like your books to be something to bite into or more of a casual read?" %><br>
-		<%= f.select :level, level_options, prompt: true %>
+		<%= f.radio_button :level, 10 %> Extremely easy
+		<%= f.radio_button :level, 30 %> Easy
+		<%= f.radio_button :level, 50 %> Medium
+		<%= f.radio_button :level, 70 %> Challenging
+		<%= f.radio_button :level, 90 %> Academic paper level
 	</div>
 
 	<div class='field'>
 		<%= f.label :mood, "How are you feeling?" %><br>
-		<%= f.select :mood, mood_options, prompt: true %>
+		<%= f.radio_button :mood, 0 %> Fantastic
+		<%= f.radio_button :mood, 20 %> Really good
+		<%= f.radio_button :mood, 40 %> Fine
+		<%= f.radio_button :mood, 60 %> Could feel better
+		<%= f.radio_button :mood, 80 %> Not great
+		<%= f.radio_button :mood, 100 %> Terrible
 	</div>
 
 	<div class='field'>
 		<%= f.label :email, "Fill in your email if you want the recommendations in your inbox!" %><br>
-		<%= f.text_field :email %>
+		<%= f.text_field :email, :size => 40 %>
 	</div>
 
 	<div class='field'>
