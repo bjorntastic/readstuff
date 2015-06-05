@@ -8,7 +8,7 @@ class BooksController < ApplicationController
 	end
 
 	def create
-		@user = User.new(params[:user].permit(:fav_genre, :email, :level, :pages, :mood))
+		@user = User.new(user_params)
 		if @user.save
 			@books = Book.all
 			@rec = recommender(@user)
@@ -64,6 +64,12 @@ class BooksController < ApplicationController
 		f.each_line do |line|
 			@show << line
 		end
+	end
+
+	private
+
+	def user_params
+		params.require(:user).permit(:fav_genre, :email, :level, :mood, :pages)
 	end
 
 end
